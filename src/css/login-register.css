@@ -1,0 +1,20 @@
+body {
+  background-color: #f4f9ff;
+}
+
+form {
+  width: 100%;
+}
+
+.box-area {
+  width: 930px;
+}
+.right-box {
+  padding: 40px 30px 40px 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .left-box img {
+    display: none;
+  }
+}
