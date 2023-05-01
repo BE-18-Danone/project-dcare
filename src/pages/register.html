@@ -17,30 +17,30 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
       <div class="row rounded-4 p-4 bg-white shadow box-area my-3 mx-1 flex-row-reverse">
         <div
-          class="col-md-6 bg-purple rounded-3 text-white p-4 d-flex justify-content-center align-items-center flex-column left-box col-sm-0"
+          class="col-md-6 bg-purple rounded-3 text-white p-4 d-flex justify-content-end align-items-center flex-column left-box col-sm-0"
         >
-          <img src="../../assets/img/login.png" alt="" class="img-fluid" />
-          Hidup sehat demi masa depan cerah
+          <!-- <img src="../../assets/img/login.png" alt="" class="img-fluid" /> -->
+          <div class="caption rounded-4 p-3 text-center">Hidup sehat demi masa depan cerah</div>
         </div>
 
         <div class="col-md-6 right-box col-sm-12">
           <h3 class="fw-bold text-purple">Dcare</h3>
           <h4 class="my-3 fw-semibold text-slate-500">Bergabung bersama kami</h4>
           <p class="text-slate-400">Buat akun untuk mengakses fitur-fitur kami.</p>
-          <form action="" class="text-slate-500">
+          <form class="text-slate-500" id="registerForm">
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
               <input type="text" class="form-control" id="name" placeholder="" required />
             </div>
             <div class="mb-3">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="male" checked />
+                <input class="form-check-input" type="radio" name="gender" id="male" checked value="male" />
                 <label class="form-check-label" for="male"> Laki-laki </label>
               </div>
             </div>
             <div class="mb-3">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="female" />
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
                 <label class="form-check-label" for="female"> Perempuan </label>
               </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="check" />
-                <label class="form-check-label" for="check">
+                <label class="form-check-label" for="">
                   Saya telah menyetujui <a href="#info" data-bs-toggle="modal" data-bs-target="#info">ketentuan</a> yang
                   berlaku</label
                 >
@@ -81,8 +81,9 @@
                 </div>
               </div>
             </div>
+            <div id="notif"></div>
             <div class="d-grid">
-              <button class="btn btn-purple">Daftar</button>
+              <button class="btn btn-purple" type="submit" id="register">Daftar</button>
             </div>
           </form>
           <hr class="hr hr-blurry" />
@@ -100,6 +101,8 @@
         </div>
       </div>
     </div>
+    <script src="../js/autentication.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
