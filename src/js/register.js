@@ -7,6 +7,7 @@ const notif = document.getElementById("notif");
 const btnRegister = document.getElementById("register");
 
 let isLoading = false;
+let data = [];
 
 const checkBoxisChecked = () => {
   if (document.getElementById("check").checked == true) {
@@ -24,14 +25,7 @@ const getRadioValue = () => {
   }
 };
 
-let data = [];
-const checkData = async () => {
-  let response = await fetch(`${BASEURL}/users`);
-  data = await response.json();
-  data.map((item, index) => {
-    console.log(item.email);
-  });
-};
+// Regiter
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   isLoading = true;
@@ -45,30 +39,41 @@ registerForm.addEventListener("submit", async (event) => {
   const uid = Math.random().toString(36).substring(2, 15);
 
   if (checkBoxisChecked()) {
-    // checkData();
-    let response = await fetch(`${BASEURL}/users`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json; charset=UTF-8",
-      },
-      body: JSON.stringify({
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        gender: user.gender,
-        status: 1,
-        uid: uid,
-      }),
-    });
-    let data = await response.json();
-    console.log(data);
-    notif.innerHTML = `<div class="alert alert-success text-center" role="alert">
-    Berhasil mendaftarkan akun, silankan login untuk melanjutkan.
-  </div>`;
-    registerForm.reset();
+    let res = await fetch(`${BASEURL}/users`);
+    let item = await res.json();
+    let tempEmail = [];
+    for (let i = 0; i < item.length; i++) {
+      if (item[i].email == user.email) {
+        tempEmail.push(item[i].email);
+      }
+    }
+    if (tempEmail[0] == user.email) {
+      notif.innerHTML = `<div class="alert alert-danger text-center" role="alert">
+      Email ${user.email} telah terdaftar sebelumnya.`;
+    } else {
+      let response = await fetch(`${BASEURL}/users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+        },
+        body: JSON.stringify({
+          name: user.name,
+          email: user.email,
+          password: user.password,
+          gender: user.gender,
+          status: 1,
+          uid: uid,
+        }),
+      });
+      let data = await response.json();
+      // console.log(data);
+      notif.innerHTML = `<div class="alert alert-success text-center" role="alert">
+      Berhasil mendaftarkan akun, silankan login untuk melanjutkan.
+    </div>`;
+      registerForm.reset();
+    }
   } else {
     notif.innerHTML = `<div class="alert alert-danger text-center" role="alert">
     Harap checklist persetujuan untuk mendaftarkan akun.`;
   }
-  checkData();
 });

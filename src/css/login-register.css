@@ -25,6 +25,10 @@ form {
   width: 100%;
 }
 
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .left-box img {
     display: none;
