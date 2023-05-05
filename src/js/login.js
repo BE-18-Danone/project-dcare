@@ -26,7 +26,8 @@ loginForm.addEventListener("submit", async (e) => {
     Email atau Password anda salah.`;
   } else if (tempData[0].email == user.email && tempData[0].password == user.password) {
     localStorage.setItem(`id`, `${tempData[0].uid}`);
-    location.href = "../../index.html";
+    localStorage.setItem(`name`, `${tempData[0].name}`);
+    location.href = "bmr.html";
   } else {
     notif.innerHTML = `<div class="alert alert-danger text-center" role="alert">
     Email atau Password anda salah.`;

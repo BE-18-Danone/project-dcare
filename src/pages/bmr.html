@@ -18,40 +18,47 @@
       <div class="row rounded-4 p-4 bg-white shadow box-area my-3 mx-1 justify-content-center">
         <div class="col-md-12 right-box col-sm-12">
           <h3 class="fw-bold text-purple">Dcare</h3>
-          <h4 class="my-3 fw-semibold text-slate-500">Hello, Salim</h4>
+          <h4 class="my-3 fw-thin text-slate-500">
+            Hello, <span id="first-name" class="h4 fw-semibold text-purple"></span>
+          </h4>
           <p class="text-slate-400">Silahkan isi kolom di bawah ini untuk melanjutkan perhitungan bmr</p>
-          <form id="loginForm" class="text-slate-500">
+          <form id="form-calculate" class="text-slate-500">
             <div class="mb-3">
-              <label for="heigth" class="form-label">Tinggi Badan</label>
-              <input type="number" class="form-control" id="heigth" placeholder="" required />
+              <label for="heigth" class="form-label">Tinggi Badan (cm)</label>
+              <input type="number" class="form-control" id="height" placeholder="" required maxlength="3" />
             </div>
             <div class="mb-3">
-              <label for="weight" class="form-label">Tinggi Badan</label>
-              <input type="number" class="form-control" id="weight" placeholder="" required />
+              <label for="weight" class="form-label">Berat Badan (Kg)</label>
+              <input type="number" class="form-control" id="weight" placeholder="" required maxlength="3" />
             </div>
             <div class="mb-3">
               <label for="age" class="form-label">Usia</label>
-              <input type="number" class="form-control" id="age" placeholder="" required />
+              <input type="number" class="form-control" id="age" placeholder="" required maxlength="3" />
             </div>
             <div class="mb-3">
-              <label for="gender" class="form-label">Jenis Kelaminn</label>
-              <select class="form-select" aria-label="Default select example">
+              <label for="gender" class="form-label">Jenis Kelamin</label>
+              <select class="form-select" aria-label="Default select example" id="gender">
                 <option value="male">Laki-Laki</option>
                 <option value="female">Perempuan</option>
               </select>
             </div>
-            <div id="notif"></div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Level Aktivitas</label>
+              <select class="form-select" aria-label="Default select example" id="level">
+                <option value="low">Rendah</option>
+                <option value="medium">Sedang</option>
+                <option value="high">Tinggi</option>
+              </select>
+            </div>
             <div class="d-grid">
-              <button class="btn btn-purple" id="login" type="button" onclick="location.href='bmr-menu.html'">
-                Selanjutnya
-              </button>
+              <button class="btn btn-purple" id="btn-calculate" type="submit">Selanjutnya</button>
             </div>
           </form>
           <!-- <hr class="hr hr-blurry" /> -->
         </div>
       </div>
     </div>
-    <script src="../js/login.js"></script>
+    <script src="../js/bmr.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
