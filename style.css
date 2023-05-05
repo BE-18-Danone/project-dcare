@@ -23,6 +23,16 @@
   color: #fff;
 }
 
+.btn-white {
+  background-color: #fff;
+  color: #896df6;
+}
+
+.btn-white:hover {
+  background-color: #c4cdda;;
+  color: #896df6;
+}
+
 /* background */
 .bg-purple {
   background-color: #896df6;
