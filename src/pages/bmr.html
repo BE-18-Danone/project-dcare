@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dcare</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/bmr.css" />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="row rounded-4 p-4 bg-white shadow box-area my-3 mx-1 justify-content-center">
+        <div class="col-md-12 right-box col-sm-12">
+          <h3 class="fw-bold text-purple">Dcare</h3>
+          <h4 class="my-3 fw-semibold text-slate-500">Hello, Salim</h4>
+          <p class="text-slate-400">Silahkan isi kolom di bawah ini untuk melanjutkan perhitungan bmr</p>
+          <form id="loginForm" class="text-slate-500">
+            <div class="mb-3">
+              <label for="heigth" class="form-label">Tinggi Badan</label>
+              <input type="number" class="form-control" id="heigth" placeholder="" required />
+            </div>
+            <div class="mb-3">
+              <label for="weight" class="form-label">Tinggi Badan</label>
+              <input type="number" class="form-control" id="weight" placeholder="" required />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Usia</label>
+              <input type="number" class="form-control" id="age" placeholder="" required />
+            </div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Jenis Kelaminn</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="male">Laki-Laki</option>
+                <option value="female">Perempuan</option>
+              </select>
+            </div>
+            <div id="notif"></div>
+            <div class="d-grid">
+              <button class="btn btn-purple" id="login" type="button" onclick="location.href='bmr-menu.html'">
+                Selanjutnya
+              </button>
+            </div>
+          </form>
+          <!-- <hr class="hr hr-blurry" /> -->
+        </div>
+      </div>
+    </div>
+    <script src="../js/login.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

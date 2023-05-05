@@ -1,0 +1,47 @@
+body {
+  background-color: #f4f9ff;
+}
+
+.box-area {
+  width: 400px;
+}
+.form-body {
+  width: 270px;
+}
+
+.card img {
+  object-position: center;
+  height: 200px;
+}
+.card {
+  overflow: hidden;
+}
+
+.category-list ul {
+  padding: 0;
+  list-style-type: none;
+}
+.category-list ul img {
+  width: 20px;
+  height: auto;
+}
+.category-list li {
+  list-style: none;
+  margin: 20px 0;
+}
+.category-list li a {
+  text-decoration: none;
+  color: #475569;
+}
+
+.menu {
+  height: 900px;
+}
+#calculate {
+  position: fixed;
+  bottom: 0;
+  margin: 20px;
+}
+.container-warp {
+  background-color: #fff;
+}
