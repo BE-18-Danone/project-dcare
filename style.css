@@ -14,6 +14,14 @@
   background-color: #7859f5;
   color: #fff;
 }
+.btn-purple-dark {
+  background-color: #6e4cf5;
+  color: #fff;
+}
+.btn-purple-dark:hover {
+  background-color: #643dfc;
+  color: #fff;
+}
 
 /* background */
 .bg-purple {
