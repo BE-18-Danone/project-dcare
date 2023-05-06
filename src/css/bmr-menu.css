@@ -40,3 +40,32 @@ body {
   list-style: none;
   margin: 20px 0;
 }
+#calculate {
+  width: 100px;
+  margin-bottom: 40px;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  #calculate {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #calculate {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #calculate {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #calculate {
+    margin-bottom: 10px;
+  }
+}
