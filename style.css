@@ -5,6 +5,13 @@
   font-size: 14px;
 }
 
+.nav-link {
+  color: #ececec;
+}
+.nav-link:hover {
+  color: #fff;
+}
+
 /* btn */
 .btn-purple {
   background-color: #896df6;
@@ -29,7 +36,7 @@
 }
 
 .btn-white:hover {
-  background-color: #c4cdda;;
+  background-color: #c4cdda;
   color: #896df6;
 }
 
@@ -40,6 +47,9 @@
 /* text-color */
 .text-purple {
   color: #896df6;
+}
+.text-red {
+  color: #e45252;
 }
 .text-slate-400 {
   color: #94a3b8;

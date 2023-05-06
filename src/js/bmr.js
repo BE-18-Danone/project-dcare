@@ -1,11 +1,20 @@
+if (localStorage.getItem("uid") == null) {
+  location.href = "login.html";
+}
+if (localStorage.getItem("name") == null) {
+  location.href = "login.html";
+}
+
 const inputHeigth = document.getElementById("height");
 const inputWeigth = document.getElementById("weight");
 const inputAge = document.getElementById("age");
 const inputGender = document.getElementById("gender");
 const inputLevel = document.getElementById("level");
 const firstName = document.getElementById("first-name");
+const titleName = document.getElementById("name-title");
 
 const getName = localStorage.getItem("name").replace(/ .*/, "");
+titleName.innerHTML = `${localStorage.getItem("name")}`;
 
 firstName.innerHTML = `${getName}`;
 
@@ -80,5 +89,11 @@ formCalculate.addEventListener("submit", (e) => {
   //   console.log(kkal.toFixed(2));
   localStorage.setItem("kkal", kkal.toFixed(2));
   formCalculate.reset();
-  location.href = "result.html";
+  location.href = "bmr-menu.html";
 });
+
+const logout = () => {
+  localStorage.removeItem("name");
+  localStorage.removeItem("uid");
+  location.href = "login.html";
+};
