@@ -18,26 +18,33 @@
 
     <header class="sticky-top">
       <!-- NavBar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-purple navbar-dark fixed-top">
         <div class="container">
-
-          <h1 class="navbar text-purple align-items-center fw-bold " href="#">D'care</h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav gap-5">
-                <li class="nav-item">
-                  <a class="nav-link fw-bold" aria-current="page" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-bold" href="/src/pages/bmr.html">BMR</a>
-                </li>
-              </ul>
-            </div>
-
-          <a href="/src/pages/login.html"><button class="rounded px-3 btn-purple text-white border-0">Masuk</button></a>
+          <a class="navbar-brand fw-bold" href="#">Dcare</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/src/pages/bmr.html">BMR</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="/src/pages/login.html" class="btn btn-light">Masuk</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <!-- End NavBar -->
@@ -47,14 +54,14 @@
       <section>
         <!-- Hero Section -->
         <div
-        class="p-5 bg-image"
-        style="background-image: url('/assets/img/hero.jpg'); background-size: 100% 100%; height: 400px;"
+        class=" bg-image"
+        style="background-image: url('https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'); background-size: cover; height: 400px; background-position-y: -150%;"
         >
           <div class="container">
             <div class="align-items-center h-100" style="width: 300px;">
               <div class="text-white">
                 <h1 class="mb-3 text-black">Ayo mulai perjalanan hidup sehatmu</h1>
-                <p class="mb-3">D'care siap membantu kamu untuk memiliki gaya hidup yang sehat!</p>
+                <p class="mb-3 text-slate-500">D'care siap membantu kamu untuk memiliki gaya hidup yang sehat!</p>
               </div>
               <div>
                 <a href="/src/pages/register.html"><button class="rounded px-3 py-1 btn-white text-purple border-0" role="button">Daftar</button></a>

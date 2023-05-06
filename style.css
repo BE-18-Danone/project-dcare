@@ -57,3 +57,7 @@
 .text-slate-500 {
   color: #475569;
 }
+
+.bg-image {
+  padding: 5rem 1rem;
+}
